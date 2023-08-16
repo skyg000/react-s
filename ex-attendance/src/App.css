@@ -1,0 +1,50 @@
+.on{
+    width: 500px;
+    margin: 0 auto;
+    border: 1px solid black;
+}
+.on h2{
+    position: relative;
+}
+.on button{
+    display: flex;
+}
+body a{
+    position: absolute;
+    right: 32%;
+    top: 2%;
+    border: 1px solid black;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: yellow;
+}
+.list{
+    width: 500px;
+    margin: 100px auto;
+    padding-bottom: 100px;
+    border: 1px solid black;
+     display: none;
+}
+.list h2{
+    position: relative;
+}
+body a{
+    position: absolute;
+    right: 5%;
+    top: 10%;
+    border: 1px solid black;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: yellow;
+}
+.list.active{
+    display: block;
+}
