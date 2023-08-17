@@ -1,49 +1,55 @@
 .on{
     width: 500px;
-    margin: 0 auto;
+    margin: 50px auto;
     border: 1px solid black;
+    text-align: center;
+    background-color: beige;
 }
 .on h2{
     position: relative;
 }
-.on button{
+
+.on li{
+    counter-increment: number 1;
+    margin:10px 0;
     display: flex;
+    justify-content: space-around;
 }
-body a{
-    position: absolute;
-    right: 32%;
-    top: 2%;
-    border: 1px solid black;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: yellow;
-}
+
 .list{
     width: 500px;
     margin: 100px auto;
     padding-bottom: 100px;
     border: 1px solid black;
-     display: none;
+    display: none;
+    background-color: pink;
+    text-align: center;
 }
 .list h2{
-    position: relative;
+    /* position: relative; */
+}
+
+.list form input{
+    margin: 20px 0 0 0;
+    width: 200px;
+    height: 30px;
 }
 body a{
     position: absolute;
-    right: 5%;
-    top: 10%;
+    right: 38%;
+    top: 7%;
     border: 1px solid black;
     border-radius: 50%;
     width: 40px;
     height: 40px;
+    font-size: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: yellow;
+    text-decoration: none;
+    z-index: 10;
+
 }
 .list.active{
     display: block;

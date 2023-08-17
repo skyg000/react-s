@@ -1,5 +1,5 @@
 import {createContext, useState} from 'react'
-export const DataContext = createContext();
+const DataContext = createContext();
 
 function Mycontxt({children}) {
     const [data,setData] = useState([]);
@@ -7,7 +7,8 @@ function Mycontxt({children}) {
         <DataContext.Provider value={{data,setData}}>
             {children}
         </DataContext.Provider>
+        
     )
 }
 
-export default Mycontxt
+export {Mycontxt,DataContext}
