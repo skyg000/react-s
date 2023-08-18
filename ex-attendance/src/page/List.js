@@ -3,10 +3,9 @@ import {DataContext} from '../Mycontxt'
 
 function List() {
     const {data,setData} = useContext(DataContext);
-      
-  const deleteData = (code)=>{
+    const deleteData = (code)=>{
     setData(data.filter(obj=>obj.code !== code))
-  }
+    }
     return (
         <article className='on'>
             <h2>  참여인원: {data.length} 명 </h2>

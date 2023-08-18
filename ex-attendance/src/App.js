@@ -5,7 +5,6 @@ import List from './page/List'
 import Write from './page/Write'
 function App() {
   
-
   let wrbo = useRef();
   // wrbo.current.classList.toggle('active')
   

@@ -2,7 +2,7 @@ import{useContext}  from 'react'
 import { DataContext } from '../Mycontxt';
 function Write({wrbo}) {
     const {data,setData} = useContext(DataContext);  
-   
+
     let insert = (e)=>{
         e.preventDefault();
         let a = e.target;
