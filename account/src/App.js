@@ -14,7 +14,7 @@ function App() {
         <nav>
           <Link to='/'>Home</Link>
           <Link to='/insert'>글쓰기</Link>
-          <Link to='/modify'>글수정</Link>
+          
         </nav>
       </header>
       <main>
