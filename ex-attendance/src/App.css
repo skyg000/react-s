@@ -34,7 +34,7 @@
     width: 200px;
     height: 30px;
 }
-body a{
+body span{
     position: absolute;
     right: 38%;
     top: 7%;
@@ -48,6 +48,7 @@ body a{
     align-items: center;
     background-color: yellow;
     text-decoration: none;
+    cursor: pointer;
     z-index: 10;
 
 }

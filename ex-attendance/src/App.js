@@ -14,7 +14,7 @@ function App() {
   }  
   return (
       <Mycontxt>
-        <a href="/" onClick={pop}> + </a> 
+        <span onClick={pop}> + </span> 
         <List />
         <Write wrbo={wrbo} />
       </Mycontxt>
