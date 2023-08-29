@@ -17,6 +17,7 @@ function Home() {
         setData(MovieTop.results)
     })
     },[])
+    
     return (
         <>
         <article className='Hom'>
