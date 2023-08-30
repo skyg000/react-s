@@ -1,10 +1,9 @@
 import './App.scss';
+import "swiper/css";
 import List from './page/List';
 import Detail from './page/Detail';
 import Home from './page/Home';
 import {Link,BrowserRouter, Routes,Route} from 'react-router-dom';
-import { useEffect, useState } from 'react';
-import axios from 'axios';
 function App() {
   
   
@@ -15,7 +14,7 @@ function App() {
       <article className='m'>
         <header>
           <nav className='menu'>
-          <h2> FLIX</h2>
+          <h2> HFLIX</h2>
             <Link to="/"> Home </Link>
             <Link to="/List"> Movie </Link>
             <Link to="/List"> TV </Link>

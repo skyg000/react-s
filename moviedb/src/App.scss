@@ -1,17 +1,43 @@
+body {
+        position: relative;
+        height: 100%;
+        background: #eee;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color: #000;
+        margin: 0;
+        padding: 0;
+    }
 html{ 
+    position: relative;
     width: 100%;
+    cursor: pointer;
+}
+h3,h2{
+    color: white;
+    list-style: none;
+    text-decoration: none;
 }
 header{
     width: 100%;
-    height: 100vh;
     margin: 0 auto;
     background-color: black;
     nav{
+        opacity: 0.6;
         display: flex;
         justify-content: space-around;
         align-items: center;
+        padding: 0 100px;
+        position: fixed;
+        background-color: #000;
+        z-index: 9;
         h2{
+            font-size: 50px;
             color: white;
+            margin-right: 52vw;
+            &:hover{
+                color: red;
+            }
         }
         a{
         display: block;
@@ -19,28 +45,150 @@ header{
         text-decoration: none;
         color: white;
         font-size: 2rem;
-        padding: 10px;
+        padding: 0 60px;
+        
+        &:hover{
+            color: red;
+            border-bottom: 1px solid;
+        }
         }
     }
     }
+      /* ====================swiper============= */
+    .back{
+        .txt{
+            width: 800px;
+            position: absolute;
+            top: 20%;
+            left: 5%;
+            h3{
+                margin-bottom: 20px;
+                width: 800px;
+                color: white;
+                font-size: 4rem;
+                font-weight: bold;
+            }
+            p{
+                color: white;
+                font-size: 1.5rem;
+                font-weight: bold;
+            }
+            }
+        }
+        .backgr{
+            width: 100%;
+            padding: 0 ;
+            margin: 0;
+            opacity: 0.6;
+            .backg{
+                width: 100%;
+                height: 700px;
+            }
+        }
+                a{
+                    .pos{
+                        width: 400px;
+                        position: absolute;
+                        right: 30%;
+                        top: 10%;
+                        border-radius: 20px;
+                    }
+                }
+            
     .Hom{
+        padding: 0 100px;
         h2{
             color: white;
+            font-size: 1.5vw;
+            display: flex;
+            justify-content: space-between;
+            a{
+                color: white;
+                background-color: pink;
+                padding: 7px 10px;
+                border-radius: 20px;
+                text-decoration: none;
+                margin-right: 50px;
+                font-size: 1vw;
+            }
         }
-        ul{
+     
+        .Myswiper {
             display: flex;
             overflow: hidden;
+            width: 100%;
+            height: 100%;
+            margin-right: 10px;
+            color: white;
+            list-style: none;
+            padding: 0;
             li{
-                margin-right: 10px;
-                color: white;
-                list-style: none;
-                padding: 0;
-                img{
-                    width: 200px;
+                .swiper-slide {
+                    margin: 0;
+                    text-align: center;
+                    font-size: 18px;
+                    background: #fff;
+                    /* Center slide text vertically */
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    a{
+                        img{
+                            border-radius: 25px;
+                        }
+                        h3{
+                            color: white;
+                        }
+                    }
                 }
-                h3{
-                    
+                .swiper-slide img {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
                 }
             }
         }
     }
+/* ===================================list=================== */
+.list{
+    width: 100%;
+    h2{
+        text-align: center;
+        color: #eee;
+        font-size: 2rem;
+        font-weight: bold;
+        margin: 50px 0 100px;
+    }
+    ul{
+        display: grid;
+        overflow: hidden;
+        grid-gap: 20px;
+        grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+        padding: 0 200px;
+        a{
+            margin-bottom: 50px;
+            li{
+                list-style: none;
+                img{
+                    width: 100%;
+                    border-radius: 25px;
+                }
+                h3{
+                    font-size: 1.2rem;
+                    text-align: left;
+                    color: #eee;
+                }
+            }
+        }   
+    }
+    p{
+        color: black;
+        background-color: rgb(247, 199, 207);
+        padding: 7px 10px;
+        border-radius: 20px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        text-align: center;
+    }
+}
