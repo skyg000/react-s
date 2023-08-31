@@ -3,22 +3,27 @@ import "swiper/css";
 import List from './page/List';
 import Detail from './page/Detail';
 import Home from './page/Home';
-import {Link,BrowserRouter, Routes,Route} from 'react-router-dom';
+import {Link,HashRouter, Routes,Route} from 'react-router-dom';
 function App() {
   
   
   
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <article className='m'>
         <header>
-          <nav className='menu'>
-          <h2> HFLIX</h2>
-            <Link to="/"> Home </Link>
-            <Link to="/List"> Movie </Link>
-            <Link to="/List"> TV </Link>
-          </nav>
+          <article className='head'>
+            <article className='logo'>
+              <a href='/'><h2> HFLIX</h2></a>
+            </article>
+              <nav className='menu'>
+                <Link to="/"> Home </Link>
+                <Link to="/movie"> Movie </Link>
+                <Link to="/tv"> TV </Link>
+              </nav>
+          </article>
+          
         <main>
           <Routes>
             <Route path='/' element={<Home/>}/>
@@ -29,7 +34,7 @@ function App() {
         </main>
         </header>
       </article>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 /* useparams  */

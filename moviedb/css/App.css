@@ -1,0 +1,212 @@
+body {
+  position: relative;
+  height: 100%;
+  background: #eee;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  position: relative;
+  width: 100%;
+  cursor: pointer;
+}
+
+h3, h2 {
+  color: white;
+  list-style: none;
+  text-decoration: none;
+}
+
+header {
+  width: 100%;
+  margin: 0 auto;
+  background-color: black;
+}
+header .head {
+  opacity: 0.4;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 100px;
+}
+header .head .logo a {
+  text-decoration: none;
+}
+header .head .logo a h2 {
+  font-size: 50px;
+  color: white;
+}
+header .head .logo a h2:hover {
+  color: red;
+}
+header .menu {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #000;
+  z-index: 9;
+}
+header .menu a {
+  display: block;
+  font-size: 1rem;
+  text-decoration: none;
+  color: white;
+  font-size: 2rem;
+  padding: 0 20px;
+}
+header .menu a:hover {
+  color: red;
+  border-bottom: 1px solid;
+}
+
+/* ====================swiper============= */
+.back .txt {
+  width: 800px;
+  position: absolute;
+  top: 20%;
+  left: 5%;
+}
+.back .txt h3 {
+  margin-bottom: 20px;
+  width: 800px;
+  color: white;
+  font-size: 4rem;
+  font-weight: bold;
+}
+.back .txt p {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.backgr {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  opacity: 0.6;
+}
+.backgr .backg {
+  width: 100%;
+  height: 700px;
+}
+
+a .pos {
+  width: 400px;
+  position: absolute;
+  right: 30%;
+  top: 10%;
+}
+
+.Hom {
+  padding: 0 100px;
+}
+.Hom h2 {
+  color: white;
+  font-size: 1.5vw;
+  display: flex;
+  justify-content: space-between;
+}
+.Hom h2 a {
+  color: white;
+  background-color: pink;
+  padding: 7px 10px;
+  border-radius: 20px;
+  text-decoration: none;
+  margin-right: 50px;
+  font-size: 1vw;
+}
+.Hom h2 a:hover {
+  color: #000;
+}
+.Hom .Myswiper {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  margin-right: 10px;
+  color: white;
+  list-style: none;
+  padding: 0;
+}
+.Hom .Myswiper li .swiper-slide {
+  margin: 0;
+  flex-shrink: 0;
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Hom .Myswiper li .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+}
+
+/* ===================================list=================== */
+.list {
+  width: 100%;
+}
+.list h2 {
+  text-transform: uppercase;
+  text-align: center;
+  color: #eee;
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 50px 0 70px;
+}
+.list ul {
+  display: grid;
+  overflow: hidden;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  padding: 0 200px;
+}
+.list ul a {
+  margin-bottom: 30px;
+}
+.list ul a li {
+  list-style: none;
+}
+.list ul a li img {
+  width: 100%;
+  height: 350px;
+  border-radius: 25px;
+}
+.list ul a li h3 {
+  font-size: 1.2rem;
+  text-align: left;
+  text-decoration: none;
+  color: #eee;
+}
+.list p {
+  margin: 0;
+  color: black;
+  background-color: rgb(247, 199, 207);
+  padding: 7px 10px;
+  border-radius: 20px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+.list p a {
+  text-decoration: none;
+  color: #000;
+}
+
+/* ==================media================== */
+@media (max-width: 1200px) {
+  .Hom {
+    padding: 0;
+  }
+  .Hom .swiper-slide {
+    margin-right: 10px;
+  }
+}/*# sourceMappingURL=App.css.map */

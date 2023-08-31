@@ -22,30 +22,38 @@ header{
     width: 100%;
     margin: 0 auto;
     background-color: black;
-    nav{
-        opacity: 0.6;
+    .head{
+        opacity: 0.4;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 100px;
+        .logo{
+            a{
+                text-decoration: none;
+                h2{
+                    font-size: 50px;
+                    color: white;
+                &:hover{
+                    color: red;
+                }
+                }
+            }
+        }
+    }
+    .menu{
         display: flex;
         justify-content: space-around;
         align-items: center;
-        padding: 0 100px;
-        position: fixed;
         background-color: #000;
         z-index: 9;
-        h2{
-            font-size: 50px;
-            color: white;
-            margin-right: 52vw;
-            &:hover{
-                color: red;
-            }
-        }
         a{
         display: block;
         font-size: 1rem;
         text-decoration: none;
         color: white;
         font-size: 2rem;
-        padding: 0 60px;
+        padding: 0 20px;
         
         &:hover{
             color: red;
@@ -91,7 +99,6 @@ header{
                         position: absolute;
                         right: 30%;
                         top: 10%;
-                        border-radius: 20px;
                     }
                 }
             
@@ -110,9 +117,11 @@ header{
                 text-decoration: none;
                 margin-right: 50px;
                 font-size: 1vw;
+                &:hover{
+                    color: #000;
+                }
             }
         }
-     
         .Myswiper {
             display: flex;
             overflow: hidden;
@@ -125,6 +134,7 @@ header{
             li{
                 .swiper-slide {
                     margin: 0;
+                    flex-shrink: 0;
                     text-align: center;
                     font-size: 18px;
                     background: #fff;
@@ -132,20 +142,13 @@ header{
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    a{
-                        img{
-                            border-radius: 25px;
-                        }
-                        h3{
-                            color: white;
-                        }
-                    }
                 }
                 .swiper-slide img {
                     display: block;
                     width: 100%;
-                    height: 100%;
+                    height: 350px;
                     object-fit: cover;
+                    
                 }
             }
         }
@@ -154,11 +157,12 @@ header{
 .list{
     width: 100%;
     h2{
+        text-transform: uppercase;
         text-align: center;
         color: #eee;
         font-size: 2rem;
         font-weight: bold;
-        margin: 50px 0 100px;
+        margin: 50px 0 70px;
     }
     ul{
         display: grid;
@@ -167,22 +171,25 @@ header{
         grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
         padding: 0 200px;
         a{
-            margin-bottom: 50px;
+            margin-bottom: 30px;
             li{
                 list-style: none;
                 img{
                     width: 100%;
+                    height: 350px;
                     border-radius: 25px;
                 }
                 h3{
                     font-size: 1.2rem;
                     text-align: left;
+                    text-decoration: none;
                     color: #eee;
                 }
             }
         }   
     }
     p{
+        margin: 0;
         color: black;
         background-color: rgb(247, 199, 207);
         padding: 7px 10px;
@@ -190,5 +197,18 @@ header{
         font-size: 1.5rem;
         font-weight: bold;
         text-align: center;
+        a{
+            text-decoration: none;
+            color: #000;
+        }
+    }
+}
+/* ==================media================== */
+@media (max-width:1200px){
+    .Hom{
+        padding: 0 ;
+    .swiper-slide{
+        margin-right: 10px;
+    }
     }
 }

@@ -1,10 +1,12 @@
 import { useEffect, useState } from 'react'
 import axios from 'axios'
+import {totalDb} from './Data'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
+import { useParams } from 'react-router-dom';
 
 function Home() {
-    
+    const param = useParams();
     const [data,setData] = useState([]);
     const [dataT,setDataT] = useState([]);
     const [tdataP,tsetDataP] = useState([]);
@@ -13,7 +15,18 @@ function Home() {
         baseURL:'https://api.themoviedb.org/3',
         params:{api_key:'f89a6c1f22aca3858a4ae7aef10de967'}
     })
-    useEffect(()=>{
+   /*  async function lod (){
+        const load = await totalDb.dbAll(`/${param.type}`)      
+    }
+
+
+
+    useEffect( () => {
+        lod()
+      }, []) */
+
+
+   useEffect(()=>{
         Movie.get('movie/popular')
         .then(res=>{
         const MovieTop = res.data
@@ -39,7 +52,6 @@ function Home() {
         .then(res=>{
         const tvt = res.data
         tsetDataT(tvt.results)
-        console.log(tvt);
     })
 },[])
 
@@ -55,7 +67,6 @@ function Home() {
                             <h3>{e.title}</h3>
                             <p>{e.overview}</p>
                             </article>
-                           
                                 <figure className='backgr'>
                                 <img className='backg' src={` https://image.tmdb.org/t/p/original/${e.backdrop_path}`}/>
                                 </figure>
@@ -71,14 +82,14 @@ function Home() {
             </Swiper>
             </article>
         <article className='Hom'>
-            <h2>인기 영화      <a href ="./List.js">더 보기</a></h2>
+            <h2>인기 영화 <a href ="./List#/movie">더 보기</a></h2>
                 <Swiper className='mySwiper' slidesPerView={7} spaceBetween={5} loop>
                 {
                     data.map((e)=>(
                         
                         <li key={e.id}> 
                         <SwiperSlide>
-                        <a href="/">
+                        <a href="./">
                         <img src={`https://image.tmdb.org/t/p/w200${e.poster_path}`}/>
                         <h3>{e.title}</h3>
                         </a>
@@ -89,7 +100,7 @@ function Home() {
                 </Swiper>
         </article>
         <article className='Hom'>
-            <h2>shvdms 영화</h2>
+            <h2>많이 본 영화<a href ="./List#/movie">더 보기</a></h2>
                 <Swiper className='mySwiper'slidesPerView={7} spaceBetween={5} loop>
                 {
                     dataT.map((e)=>(
@@ -104,7 +115,7 @@ function Home() {
                 </Swiper>
         </article>
         <article className='Hom'>
-            <h2>인기 TV시리즈</h2>
+            <h2>인기 TV시리즈<a href ="./List#/tv">더 보기</a></h2>
                 <Swiper className='mySwiper'slidesPerView={7} spaceBetween={5} loop>
                 {
                     tdataP.map((e)=>(
@@ -119,7 +130,7 @@ function Home() {
                 </Swiper>
         </article>
         <article className='Hom'>
-            <h2>높은 TV시리즈</h2>
+            <h2>많이 본 TV시리즈<a href ={Movie.d}>더 보기</a></h2>
                 <Swiper className='mySwiper'slidesPerView={7} spaceBetween={5} loop>
                 {
                     tdataT.map((e)=>(
