@@ -6,9 +6,12 @@ function App() {
   .then(res=>{
     console.log(res);
   })
+  axios.post('http://localhost:3030/insert',{id:10000,name:'신규'})
+  
+
   return (
     <>
-     
+    
     </>
   );
 }
