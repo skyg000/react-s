@@ -204,9 +204,37 @@ header{
     }
 }
 /* ==================media================== */
-@media (min-width:480px){
+@media (max-width:480px){
+    header{
+        .head{
+            justify-content: space-around;
+            padding: 0 ;
+            .logo{
+                a{
+                    h2{
+                        font-size: 30px;
+                    }
+                }
+            }
+            .menu{
+                margin-left: 50px;
+                a{
+                    padding: 0 10px;
+                }
+            }
+        }
+    }
+    .pos{
+        display: none;
+    }
     .Hom{
         padding: 0 ;
+        h2{
+            font-size:3.5vw;
+            a{
+                font-size:3vw
+            }
+        }
     .swiper-slide{
         max-width: 100%;
         margin-right: 10px;
@@ -215,8 +243,36 @@ header{
 }
 /* =======================780=============== */
 @media (max-width:780px){
+    header{
+        .head{
+            justify-content: space-around;
+            padding: 0 ;
+            .logo{
+                a{
+                    h2{
+                        font-size: 40px;
+                    }
+                }
+            }
+            .menu{
+                margin-left: 50px;
+                a{
+                    padding: 0 10px;
+                }
+            }
+        }
+    }
+    .pos{
+        display: none;
+    }
     .Hom{
         padding: 0 ;
+        h2{
+            font-size:25px;
+            a{
+                font-size:15px;
+            }
+        }
     .swiper-slide{
         max-width: 100%;
         margin-right: 10px;
@@ -225,8 +281,34 @@ header{
 }
 /* =======================1200=============== */
 @media (max-width:1200px){
+    .back{
+        .txt{
+            margin: 0 auto;
+            h3{
+                margin-bottom: 20px;
+                width: 800px;
+                color: white;
+                font-size: 4rem;
+                font-weight: bold;
+            }
+            p{
+                color: white;
+                font-size: 1.5rem;
+                font-weight: bold;
+            }
+            }
+        }
+    .pos{
+        display: none;
+    }
     .Hom{
         padding: 0 ;
+        h2{
+            font-size:30px;
+            a{
+                font-size:20px;
+            }
+        }
     .swiper-slide{
         max-width: 100%;
         margin-right: 50px;

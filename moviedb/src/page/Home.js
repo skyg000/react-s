@@ -3,7 +3,7 @@ import axios from 'axios'
 import {totalDb} from './Data'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 
 function Home() {
     const param = useParams();
@@ -55,7 +55,11 @@ function Home() {
     return (
         <>
         <article className='back'>  
-            <Swiper className='mySwiper' slidesPerView={1} loop>
+            <Swiper className='mySwiper'  breakpoints= {{
+                    1200: {
+                    slidesPerView: 1, 
+                    }
+                }} loop>
                 {
                     data.map((e)=>(
                         <figure>
@@ -80,19 +84,23 @@ function Home() {
             </article>
         <article className='Hom'>
             <h2>인기 영화 <a href ="./List#/movie">더 보기</a></h2>
-                <Swiper className='mySwiper' /* slidesPerView={7} spaceBetween={5} */ loop
+                <Swiper className='mySwiper'loop
                 breakpoints= {{
                     0: {
+                    slidesPerView: 2,  //브라우저가 1024보다 클 때
+                    spaceBetween: 4,
+                    },
+                    480: {
                     slidesPerView: 3,  //브라우저가 1024보다 클 때
                     spaceBetween: 4,
                     },
                     780: {
                     slidesPerView: 4,  //브라우저가 1024보다 클 때
-                    spaceBetween: 4,
+                    spaceBetween: 2,
                     },
                     1200: {
                     slidesPerView: 7,  //브라우저가 1024보다 클 때
-                    spaceBetween: 30,
+                    spaceBetween: 5,
                     }
                 }}
                 >
@@ -100,10 +108,10 @@ function Home() {
                     data.map((e)=>(
                         <li key={e.id}> 
                         <SwiperSlide>
-                        <a href="./">
+                        <Link to={`/movie/${e.id}`}>
                         <img src={`https://image.tmdb.org/t/p/w200${e.poster_path}`}/>
                         <h3>{e.title}</h3>
-                        </a>
+                        </Link>
                         </SwiperSlide>
                         </li>
                     ))
@@ -112,7 +120,24 @@ function Home() {
         </article>
         <article className='Hom'>
             <h2>많이 본 영화<a href ="./List#/movie">더 보기</a></h2>
-                <Swiper className='mySwiper'slidesPerView={7} spaceBetween={5} loop>
+                <Swiper className='mySwiper' breakpoints= {{
+                    0: {
+                    slidesPerView: 2,  //브라우저가 1024보다 클 때
+                    spaceBetween: 4,
+                    },
+                    480: {
+                    slidesPerView: 3,  //브라우저가 1024보다 클 때
+                    spaceBetween: 4,
+                    },
+                    780: {
+                    slidesPerView: 4,  //브라우저가 1024보다 클 때
+                    spaceBetween: 2,
+                    },
+                    1200: {
+                    slidesPerView: 7,  //브라우저가 1024보다 클 때
+                    spaceBetween: 5,
+                    }
+                }}loop>
                 {
                     dataT.map((e)=>(
                         <li key={e.id}> 
@@ -127,13 +152,32 @@ function Home() {
         </article>
         <article className='Hom'>
             <h2>인기 TV시리즈<a href ="./List#/tv">더 보기</a></h2>
-                <Swiper className='mySwiper'slidesPerView={7} spaceBetween={5} loop>
+                <Swiper className='mySwiper'breakpoints= {{
+                    0: {
+                    slidesPerView: 2,  //브라우저가 1024보다 클 때
+                    spaceBetween: 4,
+                    },
+                    480: {
+                    slidesPerView: 3,  //브라우저가 1024보다 클 때
+                    spaceBetween: 4,
+                    },
+                    780: {
+                    slidesPerView: 4,  //브라우저가 1024보다 클 때
+                    spaceBetween: 2,
+                    },
+                    1200: {
+                    slidesPerView: 7,  //브라우저가 1024보다 클 때
+                    spaceBetween: 5,
+                    }
+                }} loop>
                 {
                     tdataP.map((e)=>(
                         <li key={e.id}> 
                         <SwiperSlide>
+                        <Link to={`/tv/${e.id}`}>
                         <img src={`https://image.tmdb.org/t/p/w200${e.poster_path}`}/>
                         <h3>{e.name}</h3>
+                        </Link>
                         </SwiperSlide>
                         </li>
                     ))
@@ -142,7 +186,24 @@ function Home() {
         </article>
         <article className='Hom'>
             <h2>많이 본 TV시리즈<a href ={Movie.d}>더 보기</a></h2>
-                <Swiper className='mySwiper'slidesPerView={7} spaceBetween={5} loop>
+                <Swiper className='mySwiper'breakpoints= {{
+                    0: {
+                    slidesPerView: 2,  //브라우저가 1024보다 클 때
+                    spaceBetween: 4,
+                    },
+                    480: {
+                    slidesPerView: 3,  //브라우저가 1024보다 클 때
+                    spaceBetween: 4,
+                    },
+                    780: {
+                    slidesPerView: 4,  //브라우저가 1024보다 클 때
+                    spaceBetween: 2,
+                    },
+                    1200: {
+                    slidesPerView: 7,  //브라우저가 1024보다 클 때
+                    spaceBetween: 5,
+                    }
+                }}loop>
                 {
                     tdataT.map((e)=>(
                         <li key={e.id}> 
