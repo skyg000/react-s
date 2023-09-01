@@ -132,7 +132,7 @@ a .pos {
   list-style: none;
   padding: 0;
 }
-.Hom .Myswiper li .swiper-slide {
+.Hom .Myswiper .swiper-slide {
   margin: 0;
   flex-shrink: 0;
   text-align: center;
@@ -143,7 +143,7 @@ a .pos {
   justify-content: center;
   align-items: center;
 }
-.Hom .Myswiper li .swiper-slide img {
+.Hom .Myswiper .swiper-slide a .swiper-slide img {
   display: block;
   width: 100%;
   height: 350px;
@@ -202,11 +202,32 @@ a .pos {
 }
 
 /* ==================media================== */
+@media (min-width: 480px) {
+  .Hom {
+    padding: 0;
+  }
+  .Hom .swiper-slide {
+    max-width: 100%;
+    margin-right: 10px;
+  }
+}
+/* =======================780=============== */
+@media (max-width: 780px) {
+  .Hom {
+    padding: 0;
+  }
+  .Hom .swiper-slide {
+    max-width: 100%;
+    margin-right: 10px;
+  }
+}
+/* =======================1200=============== */
 @media (max-width: 1200px) {
   .Hom {
     padding: 0;
   }
   .Hom .swiper-slide {
-    margin-right: 10px;
+    max-width: 100%;
+    margin-right: 50px;
   }
 }/*# sourceMappingURL=App.css.map */

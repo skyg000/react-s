@@ -131,7 +131,6 @@ header{
             color: white;
             list-style: none;
             padding: 0;
-            li{
                 .swiper-slide {
                     margin: 0;
                     flex-shrink: 0;
@@ -142,17 +141,18 @@ header{
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                }
-                .swiper-slide img {
-                    display: block;
-                    width: 100%;
-                    height: 350px;
-                    object-fit: cover;
-                    
+                    a{
+                        .swiper-slide img {
+                            display: block;
+                            width: 100%;
+                            height: 350px;
+                            object-fit: cover;
+                        }
+                    }
                 }
             }
         }
-    }
+    
 /* ===================================list=================== */
 .list{
     width: 100%;
@@ -204,11 +204,33 @@ header{
     }
 }
 /* ==================media================== */
-@media (max-width:1200px){
+@media (min-width:480px){
     .Hom{
         padding: 0 ;
     .swiper-slide{
+        max-width: 100%;
         margin-right: 10px;
     }
     }
 }
+/* =======================780=============== */
+@media (max-width:780px){
+    .Hom{
+        padding: 0 ;
+    .swiper-slide{
+        max-width: 100%;
+        margin-right: 10px;
+    }
+    }
+}
+/* =======================1200=============== */
+@media (max-width:1200px){
+    .Hom{
+        padding: 0 ;
+    .swiper-slide{
+        max-width: 100%;
+        margin-right: 50px;
+    }
+    }
+}
+

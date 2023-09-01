@@ -18,9 +18,6 @@ function Home() {
    /*  async function lod (){
         const load = await totalDb.dbAll(`/${param.type}`)      
     }
-
-
-
     useEffect( () => {
         lod()
       }, []) */
@@ -83,10 +80,24 @@ function Home() {
             </article>
         <article className='Hom'>
             <h2>인기 영화 <a href ="./List#/movie">더 보기</a></h2>
-                <Swiper className='mySwiper' slidesPerView={7} spaceBetween={5} loop>
+                <Swiper className='mySwiper' /* slidesPerView={7} spaceBetween={5} */ loop
+                breakpoints= {{
+                    0: {
+                    slidesPerView: 3,  //브라우저가 1024보다 클 때
+                    spaceBetween: 4,
+                    },
+                    780: {
+                    slidesPerView: 4,  //브라우저가 1024보다 클 때
+                    spaceBetween: 4,
+                    },
+                    1200: {
+                    slidesPerView: 7,  //브라우저가 1024보다 클 때
+                    spaceBetween: 30,
+                    }
+                }}
+                >
                 {
                     data.map((e)=>(
-                        
                         <li key={e.id}> 
                         <SwiperSlide>
                         <a href="./">
