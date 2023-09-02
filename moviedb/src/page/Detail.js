@@ -10,7 +10,30 @@ function Detail() {
     if(!data) return <></>
     return (
         <>
-            <p>{ type == 'movie' ? data.data.title : data.data.name }</p>
+            <article className="detail">
+                <article className="backgi">
+                    <figure>
+                        <img className="dback1"src={` https://image.tmdb.org/t/p/original/${data.data.backdrop_path}`}/>
+                    </figure>
+                </article>
+                <article className="poster">
+                    <figure>
+                        <img className="dpos" src={`https://image.tmdb.org/t/p/w500${data.data.poster_path}`}/>
+                    </figure>
+                </article>
+                <article className="d-con">
+                    <h2>{ type == 'movie' ? data.data.title : data.data.name }</h2>
+                <article className="d-btn">
+                    <span>{data.data.genres[0].name}</span>
+                    <span>{data.data.genres[1].name}</span>
+                    <span>{data.data.genres[2].name}</span>
+                </article>
+                    <p>{data.data.overview}</p>
+                <article className="castitle">
+                    <h2>Casts</h2>
+                </article>
+                </article>
+            </article>
         </>
     )
 }

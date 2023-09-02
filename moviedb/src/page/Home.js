@@ -58,23 +58,23 @@ function Home() {
             <Swiper className='mySwiper'  breakpoints= {{
                     1200: {
                     slidesPerView: 1, 
-                    }
-                }} loop>
+                    }}} loop>
                 {
                     data.map((e)=>(
                         <figure>
                             <SwiperSlide>
-                                <article className='txt'>
-                            <h3>{e.title}</h3>
-                            <p>{e.overview}</p>
-                            </article>
-                                <figure className='backgr'>
-                                <img className='backg' src={` https://image.tmdb.org/t/p/original/${e.backdrop_path}`}/>
-                                </figure>
-                                <a href="/">
-                                <img className='pos' src={`https://image.tmdb.org/t/p/w500${e.poster_path}`}/>
-                                </a>
-                                
+                                <Link to={`/movie/${e.id}`}>
+                                    <article className='txt'>
+                                        <h3>{e.title}</h3>
+                                        <p>{e.overview}</p>
+                                    </article>
+                                    <figure className='backgr'>
+                                        <img className='backg' src={` https://image.tmdb.org/t/p/original/${e.backdrop_path}`}/>
+                                    </figure>
+                                    <a href="/">
+                                        <img className='pos' src={`https://image.tmdb.org/t/p/w500${e.poster_path}`}/>
+                                    </a>
+                                </Link>
                             </SwiperSlide>
                         </figure>
                     ))
@@ -101,23 +101,22 @@ function Home() {
                     1200: {
                     slidesPerView: 7,  //브라우저가 1024보다 클 때
                     spaceBetween: 5,
-                    }
-                }}
-                >
+                    }}}>
                 {
                     data.map((e)=>(
                         <li key={e.id}> 
-                        <SwiperSlide>
-                        <Link to={`/movie/${e.id}`}>
-                        <img src={`https://image.tmdb.org/t/p/w200${e.poster_path}`}/>
-                        <h3>{e.title}</h3>
-                        </Link>
-                        </SwiperSlide>
+                            <SwiperSlide>
+                                <Link to={`/movie/${e.id}`}>
+                                    <img src={`https://image.tmdb.org/t/p/w200${e.poster_path}`}/>
+                                    <h3>{e.title}</h3>
+                                </Link>
+                            </SwiperSlide>
                         </li>
                     ))
                 }
                 </Swiper>
         </article>
+
         <article className='Hom'>
             <h2>많이 본 영화<a href ="./List#/movie">더 보기</a></h2>
                 <Swiper className='mySwiper' breakpoints= {{
@@ -141,10 +140,12 @@ function Home() {
                 {
                     dataT.map((e)=>(
                         <li key={e.id}> 
-                        <SwiperSlide>
-                        <img src={`https://image.tmdb.org/t/p/w200${e.poster_path}`}/>
-                        <h3>{e.title}</h3>
-                        </SwiperSlide>
+                            <SwiperSlide>
+                                <Link to={`/movie/${e.id}`}>
+                                    <img src={`https://image.tmdb.org/t/p/w200${e.poster_path}`}/>
+                                    <h3>{e.title}</h3>
+                                </Link>
+                            </SwiperSlide>
                         </li>
                     ))
                 }
@@ -173,12 +174,12 @@ function Home() {
                 {
                     tdataP.map((e)=>(
                         <li key={e.id}> 
-                        <SwiperSlide>
-                        <Link to={`/tv/${e.id}`}>
-                        <img src={`https://image.tmdb.org/t/p/w200${e.poster_path}`}/>
-                        <h3>{e.name}</h3>
-                        </Link>
-                        </SwiperSlide>
+                            <SwiperSlide>
+                                <Link to={`/tv/${e.id}`}>
+                                    <img src={`https://image.tmdb.org/t/p/w200${e.poster_path}`}/>
+                                    <h3>{e.name}</h3>
+                                </Link>
+                            </SwiperSlide>
                         </li>
                     ))
                 }
@@ -207,10 +208,12 @@ function Home() {
                 {
                     tdataT.map((e)=>(
                         <li key={e.id}> 
-                        <SwiperSlide>
-                        <img src={`https://image.tmdb.org/t/p/w200${e.poster_path}`}/>
-                        <h3>{e.name}</h3>
-                        </SwiperSlide>
+                            <SwiperSlide>
+                                <Link to={`/tv/${e.id}`}>
+                                    <img src={`https://image.tmdb.org/t/p/w200${e.poster_path}`}/>
+                                    <h3>{e.name}</h3>
+                                </Link>
+                            </SwiperSlide>
                         </li>
                     ))
                 }
