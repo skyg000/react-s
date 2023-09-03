@@ -22,8 +22,7 @@ function Home() {
         lod()
       }, []) */
 
-
-   useEffect(()=>{
+    useEffect(()=>{
         Movie.get('movie/popular')
         .then(res=>{
         const MovieTop = res.data
@@ -50,7 +49,7 @@ function Home() {
         const tvt = res.data
         tsetDataT(tvt.results)
     })
-},[])
+    },[]);
 
     return (
         <>

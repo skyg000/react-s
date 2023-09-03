@@ -10,12 +10,12 @@ function Detail() {
     if(!data) return <></>
     return (
         <>
+            <article className="backgi">
+                <figure>
+                    <img className="dback1"src={` https://image.tmdb.org/t/p/original/${data.data.backdrop_path}`}/>
+                </figure>
+            </article>
             <article className="detail">
-                <article className="backgi">
-                    <figure>
-                        <img className="dback1"src={` https://image.tmdb.org/t/p/original/${data.data.backdrop_path}`}/>
-                    </figure>
-                </article>
                 <article className="poster">
                     <figure>
                         <img className="dpos" src={`https://image.tmdb.org/t/p/w500${data.data.poster_path}`}/>

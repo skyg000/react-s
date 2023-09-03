@@ -1,4 +1,4 @@
-import React, { useEffect, useState }  from 'react'
+import React, { Link,useEffect, useState }  from 'react'
 import { useParams } from 'react-router-dom'
 import {totalDb} from './Data'
 
@@ -19,12 +19,10 @@ function List() {
             <ul>
                 {
                     data1.map((e)=>(
-                        <a href=''>
-                            <li key={e.id}> 
+                        <li key={e.id}> 
                                 <img src={`https://image.tmdb.org/t/p/w200${e.poster_path}`}/>
                                 <h3>{e.title}{e.name}</h3>
                             </li>
-                        </a>
                     ))
                 }
             </ul>
